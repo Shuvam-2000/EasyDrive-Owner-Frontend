@@ -24,7 +24,7 @@ const Login = () => {
         localStorage.setItem("ownertoken", ownertoken);
         dispatch(setOwner(res.data?.owner));
         toast.success(res.data?.message || "Login Sucessful");
-        navigate("/dashboard");
+        navigate("/");
         reset();
       } else {
         toast.error(res.data?.message || "Error Login");
